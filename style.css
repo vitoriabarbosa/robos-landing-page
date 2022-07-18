@@ -1,59 +1,14 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
+  /* */
   background: #1f2024;
   height: 100vh;
   width: 100%;
-}
-
-.logo {
-  width: 3vw;
-  height: 3vw;
-}
-
-.logo div {
-  background: white;
-  height: 0.3vw;
-  margin: 0.5vw;
-  position: relative;
-  border-radius: 0.5vw;
-}
-
-.logo .div1 {
-  width: 1.2vw;
-  left: 0.9vw;
-}
-
-.logo .div2 {
-  width: 2.3vw;
-}
-
-.logo .div3 {
-  width: 1.2vw;
-  left: 0.3vw;
-}
-
-.barrinhas {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 80vh;
-}
-
-.barrinhas div {
-  margin: 1.3vw 3vw;
-  background: white;
-  width: 1.8vw;
-  height: 0.1vw;
-}
-
-.barrinhas :nth-child(2) {
-  background: #fa921f;
-  width: 3.5vw;
 }
 
 .menu {
@@ -63,27 +18,94 @@ body {
   padding: 1vw 3vw 0 3vw;
 }
 
-ul {
+.logo {
+  width: 3vw;
+  height: 3vw;
+  cursor: pointer;
+}
+
+.logo div {
+  background: white;
+  height: 0.22vw;
+  margin: 0.5vw;
+  position: relative;
+  border-radius: 0.5vw;
+}
+
+.logo :nth-child(1) {
+  width: 1.2vw;
+  left: 0.9vw;
+}
+
+.logo :nth-child(2) {
+  width: 2.3vw;
+}
+
+.logo :nth-child(3) {
+  width: 1.2vw;
+  left: 0.3vw;
+}
+
+.menu ul {
   display: flex;
   justify-content: space-around;
 }
 
-ul li {
-  margin: 1vw;
+.menu ul li {
+  margin: 1vw 2.5vw;
   list-style: none;
 }
 
-ul li :hover {
+.menu ul li :hover {
   border-bottom: 0.3vw solid #fa921f;
   color: #ccc;
 }
 
-ul li a {
+.menu ul li a {
   text-decoration: none;
   color: white;
   text-transform: uppercase;
   font-size: 1vw;
   padding-bottom: 0.5vw;
+}
+
+svg {
+  width: 1.6vw;
+  height: 1.6vw;
+  color: white;
+  cursor: pointer;
+}
+
+.conteudo {
+  display: flex;
+  height: 90%;
+  width: 100%;
+  background-image: url("robo.png");
+  background-repeat: no-repeat;
+  /* background-size: 40vw; */
+  /* background-position: 98% 3%; */
+  background-size: 34vw;
+  background-position: 92% 3%;
+}
+
+.barrinhas {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 76vh;
+}
+
+.barrinhas div {
+  margin: 1.3vw 3vw;
+  background: white;
+  width: 1.5vw;
+  height: 0.1vw;
+}
+
+.barrinhas :nth-child(2) {
+  background: #fa921f;
+  width: 3vw;
 }
 
 main {
@@ -92,20 +114,24 @@ main {
   justify-content: space-between;
 }
 
-.conteudo {
+.area-central {
   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 0 2.5vw 0;
 }
 
-.principal{
-  width: 56%;
-  margin: 3vw 2vw 1vw 2vw;
+.principal {
+  width: 88%;
+  margin: 2.5vw 1vw 1vw 1vw;
 }
 
 h1 {
+  width: 60%;
   color: white;
   font-size: 5vw;
   font-weight: 800;
-  line-height: 6vw;
+  line-height: 5vw;
   margin: 1vw 1vw 1vw 0;
 }
 
@@ -115,21 +141,90 @@ h1 span {
 
 p {
   color: white;
-  font-size: 1vw;
+  font-size: 1.35vw;
 }
 
+.secundaria {
+  width: 67%;
+  margin-left: 3vw;
+}
+
+.secundaria div {
+  background: #76624a;
+  display: flex;
+  border-radius: 1vw;
+  width: 100%;
+}
+
+.secundaria h2 {
+  font-size: 1.3vw;
+  color: white;
+  font-weight: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 12vw;
+  padding-right: 1.2vw;
+}
+
+.secundaria h2 span::after {
+  content: '→';
+  color: #fa921f;
+  font-size: 2.4vw;
+}
+
+.secundaria .texto {
+  margin: 1.8vw 2.4vw 1.8vw 2vw;
+}
+
+.secundaria .texto h3 {
+  font-size: 1.2vw;
+  color: white;
+  font-weight: 700;
+  margin-bottom: 1vw;
+}
+
+.secundaria .texto p {
+  font-size: 1vw;
+  color: white;
+}
+
+.secundaria .img-robo2 {
+  width: 50%;
+}
+
+.secundaria .img-robo2 img {
+  width: 12vw;
+  border-radius: 1vw;
+  box-shadow: 0.2vw 0.2vw 3vw;
+  position: absolute;
+  top: 62vh;
+  left: 10vw;
+}
+
+.play-robo {
+  height: 0;
+  width: 0;
+  border: 0.9vw solid transparent;
+  border-left: 1.5vw solid white;
+  position: absolute;
+  left: 15.2vw;
+  top: 74vh;
+  z-index: 2;
+}
+
+/*
 img {
   height: 100%;
 }
+*/
 
 .img-robo {
-  height: 85vh;
-}
-
-svg {
-  width: 1.6vw;
-  height: 1.6vw;
-  color: white;
+  /* height: 85vh; */
+  width: 50%;
+  /* background-image: url(robo2.png); */
+  /* background-repeat: no-repeat; */
+  /* background-size: cover; */
 }
 
 .redes-sociais {
@@ -146,7 +241,7 @@ svg {
 
 .redes-sociais span :hover {
   color: #fa921f;
-  transition: 0.3s;
+  transition: 0.1s;
 }
 
 .redes-sociais svg {
